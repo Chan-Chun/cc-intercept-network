@@ -1,0 +1,23 @@
+{
+  "name": "cc-intercept-network",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha-phantomjs -p ./node_modules/.bin/phantomjs test/f2e/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chan-Chun/cc-intercept-network.git"
+  },
+  "author": "Chan-Chun",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Chan-Chun/cc-intercept-network/issues"
+  },
+  "homepage": "https://github.com/Chan-Chun/cc-intercept-network#readme",
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "mocha-phantomjs": "^4.1.0"
+  }
+}
