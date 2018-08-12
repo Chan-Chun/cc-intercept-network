@@ -1,0 +1,24 @@
+{
+  "name": "cc-intercept-network",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "macaca run -d ./test/e2e"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chan-Chun/cc-intercept-network.git"
+  },
+  "author": "Chan-Chun",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Chan-Chun/cc-intercept-network/issues"
+  },
+  "homepage": "https://github.com/Chan-Chun/cc-intercept-network#readme",
+  "devDependencies": {
+    "macaca-electron": "2",
+    "macaca-wd": "^1.1.0",
+    "macaca-cli": "^2.0.12"
+  }
+}
