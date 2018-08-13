@@ -2,9 +2,10 @@
   "name": "cc-intercept-network",
   "version": "1.0.0",
   "description": "",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha-phantomjs -p ./node_modules/.bin/phantomjs test/f2e/index.html"
+    "test": "./node_modules/.bin/mocha-phantomjs -p ./node_modules/.bin/phantomjs test/f2e/index.html",
+    "build": "rm -rf ./dist && mkdir ./dist && babel lib/cc-intercept-network.js -o dist/index.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,9 @@
   },
   "homepage": "https://github.com/Chan-Chun/cc-intercept-network#readme",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
     "mocha": "^5.2.0",
     "mocha-phantomjs": "^4.1.0"
   }

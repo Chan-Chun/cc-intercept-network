@@ -11,7 +11,29 @@
     <script src="mocha.js"></script>
     <script>mocha.setup('bdd');</script>
     <script src="tests.js"></script>
+    <script src="../../dist/index.js">
+    </script>
     <script>
+      if (hookFetch && hookXHR) {
+        hookXHR({
+          send: (...args) => {
+            console.log(args)
+          },
+          headerReceived: (...args) => {
+            console.log(args)
+          },
+          over: (...args) => {
+            console.log(args)
+          }
+        })
+      }
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+        }
+      };
+      xhttp.open("GET", "https://www.baidu.com", true);
+      xhttp.send();
     </script>
     <script>
       if (window.mochaPhantomJS) { mochaPhantomJS.run(); }
