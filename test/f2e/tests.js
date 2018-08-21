@@ -1,4 +1,5 @@
-describe('', function () {
-  it('', function () {
+describe('test hook', function () {
+  it('hookXHR should be ok', function () {
+    
   });
 });
