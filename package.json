@@ -1,7 +1,7 @@
 {
   "name": "cc-intercept-network",
   "version": "1.0.0",
-  "description": "",
+  "description": "cc-intercipt-network help you intercipt network",
   "main": "dist/index.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha-phantomjs -p ./node_modules/.bin/phantomjs test/f2e/index.html",
