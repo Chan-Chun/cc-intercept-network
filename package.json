@@ -22,6 +22,7 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
+    "chai": "^4.1.2",
     "mocha": "^5.2.0",
     "mocha-phantomjs": "^4.1.0",
     "phantomjs": "^2.1.7+deprecated",
