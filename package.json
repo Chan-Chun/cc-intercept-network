@@ -1,11 +1,11 @@
 {
   "name": "cc-intercept-network",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "cc-intercipt-network help you intercipt network",
   "main": "dist/index.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha-phantomjs -p ./node_modules/.bin/phantomjs test/f2e/index.html",
-    "build": "rm -rf ./dist && mkdir ./dist && babel lib/cc-intercept-network.js -o dist/index.js"
+    "build": "webpack -p --mode production"
   },
   "repository": {
     "type": "git",
@@ -20,9 +20,13 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
     "mocha": "^5.2.0",
     "mocha-phantomjs": "^4.1.0",
-    "phantomjs": "^2.1.7+deprecated"
+    "phantomjs": "^2.1.7+deprecated",
+    "webpack": "^4.0.1",
+    "webpack-cli": "^2.0.10",
+    "webpack-dev-server": "^3.1.0"
   }
 }
