@@ -25,18 +25,25 @@
           },
           over: (...args) => {
             console.log(args[0].resText)
-            window.hookRes = args[0].resText
+            window.hookXHRRes = args[0].resText
           }
+        })
+        hookFetch((res, args) => {
+          res.json().then(hookFetchRes => window.hookFetchRes = hookFetchRes)
         })
       }
       var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-          window.normalRes = xhttp.response
+          window.normalXHRRes = xhttp.response
         }
       };
-      xhttp.open("GET", "./test.json", true);
+      xhttp.open('GET', './test.json', true);
       xhttp.send();
+
+      fetch('./test.json').then(res => {
+        res.json().then(normalFetchRes => window.normalFetchRes = hookFetchRes)
+      })
     </script>
     <script>
       if (window.mochaPhantomJS) { mochaPhantomJS.run(); }
